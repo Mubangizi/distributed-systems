@@ -11,16 +11,31 @@ public class RunClient {
         client.startClient();
 
         Scanner in = new Scanner(System.in);
+        // while (true) {
+        // System.out.println("Input >");
+        // String line = in.nextLine();
+
+        // if (line.equalsIgnoreCase("exit"))
+        // break;
+
+        // String result = null;
+        // try {
+        // result = client.toUpperCase(line);
+        // System.out.println("Result > " + result);
+        // } catch (Exception e) {
+        // System.out.println("Error: " + e.getMessage());
+        // }
+        // }
         while (true) {
             System.out.println("Input >");
-            String line = in.nextLine();
+            int line = in.nextInt();
 
-            if (line.equalsIgnoreCase("exit"))
+            if (line == 0)
                 break;
 
             String result = null;
             try {
-                result = client.toUpperCase(line);
+                result = client.checkPrime(line);
                 System.out.println("Result > " + result);
             } catch (Exception e) {
                 System.out.println("Error: " + e.getMessage());

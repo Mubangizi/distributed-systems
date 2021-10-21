@@ -29,4 +29,15 @@ public class RMIClient {
         }
         return result;
     }
+
+    public String checkPrime(int argument) {
+        String result = null;
+        try {
+            result = server.checkPrime(argument);
+        } catch (RemoteException e) {
+            e.printStackTrace();
+            throw new RuntimeException("Could not contact server");
+        }
+        return result;
+    }
 }

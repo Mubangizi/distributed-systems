@@ -23,6 +23,5 @@ public class Test {
         checkPrime(1);
         checkPrime(3);
         checkPrime(4);
-
     }
 }
