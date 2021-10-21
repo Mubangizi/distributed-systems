@@ -30,8 +30,10 @@ public class RunClient {
             System.out.println("Input >");
             int line = in.nextInt();
 
-            if (line == 0)
+            if (line == 0) {
+                in.close();
                 break;
+            }
 
             String result = null;
             try {
